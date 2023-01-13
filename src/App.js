@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import ClassCounter from './Counter/ClassCounter';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [details, setDetails] = useState(false)
+
+    return (
+      // <ClassCounter/>
+        <div style={
+            {
+                width: "500px",
+                margin: "0 auto"
+            }
+        }>
+            <button style={
+                    {
+                      marginLeft: "30%"
+                    }
+                }
+                type='button'
+                className='btn btn-primary'
+                onClick={
+                    () => setDetails(prev => !prev)
+            }>
+                {
+                details ? "Hide Details" : "Show Details"
+            } </button>
+
+            {
+            details && <div style={
+              {
+                marginLeft: "23%"
+              }
+            }>
+                <p>
+                    <u>
+                      Hello! My name is Chicki!
+                    </u>
+                </p>
+            </div>
+        } </div>
+    )
 }
 
-export default App;
+export default App

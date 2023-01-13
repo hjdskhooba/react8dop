@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    text-align: center;
+    align-items: center;
+}
+
+.Counter{
+    margin-top: 200px;
+}
+
+header{
+    margin-bottom: 10px;
+    font-size: 20px
+}
+
+button{
+    width: 50px;
+    height: 25px;
+}
+
+
+
+.btn-reset{
+    margin-top: 5px;
+}
